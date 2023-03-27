@@ -1,4 +1,4 @@
-<h1>{{title}}</h1>
+<h1>EDITAR USUARIO</h1>
 <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="row">
         <div class="mb-3 col">
@@ -9,16 +9,16 @@
             </div>
         </div>
         <div class="mb-3 col">
-            <label class="form-label">Last Name</label>
+            <label class="form-label">Apellido</label>
             <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f }" />
             <div *ngIf="submitted && f" class="invalid-feedback">
-                <div *ngIf="f">Last Name is required</div>
+                <div *ngIf="f">APELLIDO REQUERIDO</div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="mb-3 col">
-            <label class="form-label">Username</label>
+            <label class="form-label">NOMBRE DE USUARIO</label>
             <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f }" />
             <div *ngIf="submitted && f" class="invalid-feedback">
                 <div *ngIf="f">Username is required</div>
@@ -26,20 +26,20 @@
         </div>
         <div class="mb-3 col">
             <label class="form-label">
-                Password
+                CONTRASENA
                 <em *ngIf="id">(Leave blank to keep the same password)</em>
             </label>
             <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f }" />
             <div *ngIf="submitted && f" class="invalid-feedback">
-                <div *ngIf="f">Password is required</div>
-                <div *ngIf="f">Password must be at least 6 characters</div>
+                <div *ngIf="f">CONTRASENA REQUERIDA</div>
+                <div *ngIf="f">CONTRASENA DE 6 CARACTERES</div>
             </div>
         </div>
     </div>
     <div class="mb-3">
         <button [disabled]="submitting" class="btn btn-primary">
             <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1"></span>
-            Save
+            GUARDAR
         </button>
         <a routerLink="/users" class="btn btn-link">Cancel</a>
     </div>
