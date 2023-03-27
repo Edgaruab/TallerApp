@@ -2,10 +2,10 @@
 <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="row">
         <div class="mb-3 col">
-            <label class="form-label">First Name</label>
+            <label class="form-label">Nombre</label>
             <input type="text" formControlName="firstName" class="form-control" [ngClass]="({ 'is-invalid': submitted && f })" />
             <div *ngIf="submitted" class="invalid-feedback">
-                <div *ngIf="f">First Name is required</div>
+                <div *ngIf="f">Nombre requerido</div>
             </div>
         </div>
         <div class="mb-3 col">
